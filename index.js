@@ -1,7 +1,14 @@
-/** @format */
+// index.ios.js - place code in here for IOS
 
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
+// Import a library to help create a component
+import React from 'react'
+import { AppRegistry } from 'react-native'
+import Header from './src/components/header'
 
-AppRegistry.registerComponent(appName, () => App);
+// Create a component
+const App = () => (
+  <Header headerText={'Albums'} />
+)
+
+// Render it to the device
+AppRegistry.registerComponent('albums', () => App)
